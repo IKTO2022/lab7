@@ -1,0 +1,47 @@
+CREATE TABLE transport
+(
+  id INTEGER NOT NULL,
+  brand VARCHAR(50),
+  body_type VARCHAR(20),
+  engine_power INTEGER,
+  max_speed INTEGER,
+  seats INTEGER,
+  PRIMARY KEY (id)
+);
+INSERT INTO transport(id, brand, body_type, engine_power, max_speed, seats) VALUES (1, 'Toyota', 'купе', 200, 210, 2);
+INSERT INTO transport(id, brand, body_type, engine_power, max_speed, seats) VALUES (2, 'Nissan', 'универсал', 170, 180, 6);
+INSERT INTO transport(id, brand, body_type, engine_power, max_speed, seats) VALUES (3, 'Toyota', 'минивен', 250, 230, 7);
+INSERT INTO transport(id, brand, body_type, engine_power, max_speed, seats) VALUES (4, 'BMW', 'купе', 200, 210, 2);
+INSERT INTO transport(id, brand, body_type, engine_power, max_speed, seats) VALUES (5, 'Toyota', 'хэтчбэк', 150, 160, 5);
+INSERT INTO transport(id, brand, body_type, engine_power, max_speed, seats) VALUES (6, 'Nissan', 'седан', 230, 210, 4);
+
+
+5
+SELECT * FROM transport
+SELECT brand, body_type, engine_power, max_speed, seats FROM transport
+
+6
+SELECT brand, body_type, engine_power, max_speed, seats FROM transport ORDER BY max_speed DESC
+SELECT brand, body_type, engine_power, max_speed, seats FROM transport ORDER BY max_speed 
+7
+SELECT * FROM transport WHERE seats = 2
+8
+SELECT brand, body_type, engine_power, max_speed, seats FROM transport WHERE brand = 'Toyota' and body_type = 'купе'
+9
+INSERT INTO transport(id, brand, body_type, engine_power, max_speed, seats) VALUES (7, 'Toyota', 'купе', 180, 190, 2);
+10
+UPDATE transport Set body_type='седан' WHERE brand='Toyota';
+11
+SELECT COUNT(DISTINCT(brand)) FROM transport
+Вывод-3
+SELECT COUNT(*) FROM transport WHERE brand = 'Toyota'
+Vivod – 4
+12
+SELECT COUNT(*) FROM transport;
+Vivod-7
+DELETE FROM transport WHERE id = 7;
+SELECT COUNT(*) FROM transport;
+Vivod-6
+13
+SELECT * FROM transport
+ 
